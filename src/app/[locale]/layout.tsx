@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
 import { Geist, Geist_Mono } from 'next/font/google';
 import '../globals.css';
-import {NextIntlClientProvider} from "next-intl";
-
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,6 +39,11 @@ export const metadata: Metadata = {
     },
   ],
 };
+export const dynamic = 'force-static';
+
+export async function generateStaticParams() {
+  return [{ locale: 'ru' }];
+}
 
 export default async function RootLayout({
   children,

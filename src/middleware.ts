@@ -1,4 +1,4 @@
-import type { NextFetchEvent, NextRequest } from 'next/server';
+import type { NextRequest } from 'next/server';
 import { routing } from '@/libs/i18nNavigation';
 import createMiddleware from 'next-intl/middleware';
 import { NextResponse } from 'next/server';
@@ -7,7 +7,6 @@ const intlMiddleware = createMiddleware(routing);
 
 export default async function middleware(
   request: NextRequest,
-  event: NextFetchEvent,
 ) {
   const path = request.nextUrl.pathname;
 

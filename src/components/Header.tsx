@@ -1,10 +1,6 @@
-import type { ReactNode } from 'react';
-import { Link } from '@/libs/i18nNavigation';
 import Image from 'next/image';
 import React from 'react';
 import NavLink from './NavLink';
-
-
 
 const Header = () => {
   return (
@@ -17,11 +13,11 @@ const Header = () => {
         height={60}
         priority
       />
-      {/*<nav className="flex flex-row">*/}
-      {/*  <ul className="flex items-center gap-4 text-xl font-semibold">*/}
-      {/*    /!*<li><NavLink href="#">Цены</NavLink></li>*!/*/}
-      {/*  </ul>*/}
-      {/*</nav>*/}
+      {/* <nav className="flex flex-row"> */}
+      {/*  <ul className="flex items-center gap-4 text-xl font-semibold"> */}
+      {/*    /!*<li><NavLink href="#">Цены</NavLink></li>*!/ */}
+      {/*  </ul> */}
+      {/* </nav> */}
       <div className="flex flex-col gap-2">
         <div className="flex flex-row items-center content-between gap-2">
           <Image src="/icons/phone.svg" alt="phone" width={32} height={32} priority />

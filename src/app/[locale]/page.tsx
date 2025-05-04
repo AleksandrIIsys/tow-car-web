@@ -1,10 +1,10 @@
 import Banner from '@/components/Banner';
+import CustomSwiper from '@/components/CustomSwiper';
 import Header from '@/components/Header';
+import NavLink from '@/components/NavLink';
 import TableServices from '@/components/TableServices';
 import Image from 'next/image';
-import CustomSwiper from "@/components/CustomSwiper";
-import React from "react";
-import NavLink from "@/components/NavLink";
+import React from 'react';
 
 /**
  *
@@ -32,10 +32,10 @@ export default function Home() {
           </ul>
         </div>
         <div className="flex flex-col bg-primary w-[100%] text-white py-4">
-            <div className="xl:w-[1280px] lg:w-[824px] md:w-[568px] sm:w-[440px] max-sm:w-[300px] self-center">
-              <p className="text-3xl max-lg:text-xl max-sm:text-lg  font-bold mb-4">Фото выполненных услуг эвакуатора</p>
-              <CustomSwiper  />
-            </div>
+          <div className="xl:w-[1280px] lg:w-[824px] md:w-[568px] sm:w-[440px] max-sm:w-[300px] self-center">
+            <p className="text-3xl max-lg:text-xl max-sm:text-lg  font-bold mb-4">Фото выполненных услуг эвакуатора</p>
+            <CustomSwiper />
+          </div>
         </div>
         <div className="self-center xl:w-[1280px] lg:w-[824px] md:w-[568px] sm:w-[440px] max-sm:px-4 py-4">
           <p className="text-lg max-sm:text-sm text-justify">Оказываем помощь на дороге: подкачиваем спустившие колеса, при необходимости меняем их, заряжаем аккумуляторы, подвозим топливо, открываем захлопнувшиеся двери авто. Оформляем документы для страховых компаний. В нашем парке представлены все виды эвакуаторов: машины, оснащенные лебедкой, краном-манипулятором, со сдвижной и прямой автоплатформами, возможна частичная погрузка.</p>
@@ -43,7 +43,7 @@ export default function Home() {
       </main>
       <footer className="flex flex-row items-center justify-around  bg-gray-600 py-4 text-white">
         <div className="flex flex-col gap-1">
-          <Image className={'rounded-4xl'} src={'/icon.png'} alt={'icon'} width={64} height={64}/>
+          <Image className="rounded-4xl" src="/icon.png" alt="icon" width={64} height={64} />
           <p className="text-sm">УНП 00000000000</p>
           <p className="text-sm">Минск, Улица Дома</p>
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
 
           </div>
         </div>
-        </footer>
+      </footer>
     </div>
   );
 }
