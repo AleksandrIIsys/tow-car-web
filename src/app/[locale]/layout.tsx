@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import { routing } from '@/libs/i18nNavigation';
 import { NextIntlClientProvider } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { Geist, Geist_Mono } from 'next/font/google';
 import '../globals.css';
 
@@ -42,7 +44,9 @@ export const metadata: Metadata = {
 export const dynamic = 'force-static';
 
 export async function generateStaticParams() {
-  return [{ locale: 'ru' }];
+  return routing.locales.map(locale => ({
+    locale,
+  }));
 }
 
 export default async function RootLayout({
@@ -54,6 +58,7 @@ export default async function RootLayout({
 
 }>) {
   const { locale } = await params;
+  setRequestLocale(locale);
 
   return (
     <html lang={locale}>
