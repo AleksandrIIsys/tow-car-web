@@ -2,7 +2,9 @@ import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    basePath: "/tow-car-web",
+    output: "export",
+    reactStrictMode: true,
 };
 const withNextIntl = createNextIntlPlugin('src/libs/i18n.ts');
 
