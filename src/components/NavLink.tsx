@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Link } from '@/libs/i18nNavigation';
+import Link from 'next/link';
 import React from 'react';
 
 type NavLinkProps = { className?: string; href: string; children: ReactNode };

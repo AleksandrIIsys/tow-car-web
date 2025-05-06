@@ -1,9 +1,5 @@
 import type { NextRequest } from 'next/server';
-import { routing } from '@/libs/i18nNavigation';
-import createMiddleware from 'next-intl/middleware';
 import { NextResponse } from 'next/server';
-
-const intlMiddleware = createMiddleware(routing);
 
 export default async function middleware(
   request: NextRequest,
@@ -14,7 +10,7 @@ export default async function middleware(
     return NextResponse.next();
   }
 
-  return intlMiddleware(request);
+  return request;
 }
 export const config = {
   matcher: [

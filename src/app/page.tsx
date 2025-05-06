@@ -3,20 +3,13 @@ import CustomSwiper from '@/components/CustomSwiper';
 import Header from '@/components/Header';
 import NavLink from '@/components/NavLink';
 import TableServices from '@/components/TableServices';
-import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import React from 'react';
 
-type PageProps = {
-  params: Promise<{ locale: string }>;
-};
-export default async function Page({ params }: PageProps) {
-  const { locale } = await params;
-  const tw = await getTranslations({ locale });
+export default async function Page() {
   return (
     <div className="grid grid-rows-1 min-h-screen font-[family-name:var(--font-geist-sans)]">
       <Header />
-      {tw('RootLayout.home_link')}
       <main className="flex flex-col  gap-4">
         <Banner />
         <div className="flex flex-row self-center mx-4 items-center max-lg:flex-col xl:w-[1280px] lg:w-[824px] md:w-[568px] sm:w-[440px] gap-4">
