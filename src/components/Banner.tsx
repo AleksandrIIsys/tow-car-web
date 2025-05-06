@@ -1,12 +1,12 @@
 import Button from '@/components/Button';
-import Image from 'next/image';
+import CustomImage from '@/components/CustomImage';
 import React from 'react';
 
 type InformationContainerProps = { icon: string; title: string; subtitle: string };
 
 const InformationContainer = ({ icon, subtitle, title }: InformationContainerProps) => (
   <div className="grid grid-flow-col gap-x-4 items-center w-58 max-sm:gap-x-1 max-sm:w-40">
-    <Image className="row-span-2" src={icon} alt={icon} width={40} height={40} />
+    <CustomImage className="row-span-2" src={icon} alt={icon} width={40} height={40} />
     <p className="col-span-2 text-sm max-sm:text-xs">{title}</p>
     <p className="col-span-2 text-sm/4.5 max-sm:text-xs/4.5 text-gray-500">{subtitle}</p>
   </div>

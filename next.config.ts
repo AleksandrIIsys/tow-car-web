@@ -3,7 +3,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   basePath: '/tow-car-web',
-  output: 'export',
+  output: 'standalone',
   reactStrictMode: true,
 };
 // const withNextIntl = createNextIntlPlugin();

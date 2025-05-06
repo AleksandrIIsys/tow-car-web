@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import CustomImage from '@/components/CustomImage';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -15,10 +15,10 @@ const CustomSwiper = ({ className }: IProps) => {
     <div className={className}>
       <Swiper slidesPerGroup={2} slidesPerView={2} spaceBetween={12}>
         <SwiperSlide className="justify-items-center">
-          <Image src="/static/photo_car1.jpg" alt="" width={640} height={420} />
+          <CustomImage src="/static/photo_car1.jpg" alt="" width={640} height={420} />
         </SwiperSlide>
         <SwiperSlide className="justify-items-center">
-          <Image src="/static/photo_car2.jpg" alt="" width={640} height={420} />
+          <CustomImage src="/static/photo_car2.jpg" alt="" width={640} height={420} />
         </SwiperSlide>
       </Swiper>
     </div>
