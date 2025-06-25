@@ -36,7 +36,7 @@ export default function RootLayout({ children }: {
   // Using internationalization in Client Components
 
   return (
-    <html lang="ru">
+    <html lang="ru" suppressHydrationWarning>
       <body>
         {children}
       </body>
